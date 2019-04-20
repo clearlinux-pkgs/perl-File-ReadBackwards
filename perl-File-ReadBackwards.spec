@@ -4,11 +4,11 @@
 #
 Name     : perl-File-ReadBackwards
 Version  : 1.05
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/U/UR/URI/File-ReadBackwards-1.05.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/U/UR/URI/File-ReadBackwards-1.05.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libf/libfile-readbackwards-perl/libfile-readbackwards-perl_1.05-2.debian.tar.xz
-Summary  : ~
+Summary  : read a file backwards by lines
 Group    : Development/Tools
 License  : Artistic-1.0 GPL-1.0
 Requires: perl-File-ReadBackwards-license = %{version}-%{release}
@@ -24,6 +24,7 @@ interface.
 Summary: dev components for the perl-File-ReadBackwards package.
 Group: Development
 Provides: perl-File-ReadBackwards-devel = %{version}-%{release}
+Requires: perl-File-ReadBackwards = %{version}-%{release}
 
 %description dev
 dev components for the perl-File-ReadBackwards package.
@@ -42,7 +43,7 @@ license components for the perl-File-ReadBackwards package.
 cd ..
 %setup -q -T -D -n File-ReadBackwards-1.05 -b 1
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/File-ReadBackwards-1.05/deblicense/
+cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/File-ReadBackwards-1.05/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
