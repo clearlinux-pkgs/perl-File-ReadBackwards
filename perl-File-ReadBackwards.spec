@@ -4,7 +4,7 @@
 #
 Name     : perl-File-ReadBackwards
 Version  : 1.05
-Release  : 14
+Release  : 15
 URL      : https://cpan.metacpan.org/authors/id/U/UR/URI/File-ReadBackwards-1.05.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/U/UR/URI/File-ReadBackwards-1.05.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libf/libfile-readbackwards-perl/libfile-readbackwards-perl_1.05-2.debian.tar.xz
@@ -103,4 +103,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/File/ReadBackwards.pm
+/usr/lib/perl5/vendor_perl/5.30.3/File/ReadBackwards.pm
